@@ -1,1 +1,56 @@
 # chatbot_basic
+
+# Installation modules:
+
+
+pip install streamlit transformers torch
+
+
+
+# selection Model
+
+
+Model Selection: The most important change is on line 5. I've switched the MODEL_NAME from "microsoft/DialoGPT-medium" to "google/gemma-2b-it". The "it" in the name stands for "instruction-tuned," which means it has been specifically trained to follow instructions and answer questions, making it much more suitable for your use case.
+
+Input Formatting: The gemma model requires the entire chat history to be passed to it as a single, specially formatted tensor. I've updated the logic inside the if prompt := st.chat_input(...) block to build a full conversation history list and then use st.session_state.tokenizer.apply_chat_template() to format it correctly for the model. This is the new standard for modern conversational models and makes the chatbot more robust.
+
+Generation Parameters: I've also slightly adjusted the generate parameters (max_length, top_k, top_p, temperature) to values that are commonly used and work well with the gemma model.
+🧠 Ollama-Powered Python Agent with Streamlit
+
+This project is a locally hosted AI agent built using 
+, , and 
+
+. It interprets natural language commands, generates Python code, and executes it live — all without needing an API key or internet access.
+🚀 Features
+
+    ✅ Local LLM (Mistral via Ollama)
+
+    🧪 Python code execution using LangChain’s PythonREPLTool
+
+    🧠 Agent reasoning with Thought → Action → Observation
+
+    📚 Injected knowledge base for Indian state capitals
+
+    🖥️ Streamlit UI with live agent feedback
+
+    🔐 Fully offline — no external APIs required
+
+📦 Requirements
+
+
+pip install streamlit langchain langchain_experimental langchain_community
+
+
+To pull the ollama model
+
+curl -fsSL https://ollama.ai/install.sh | sh
+ollama pull mistral
+
+
+chatbot_basic/
+├── agent_app.py         # Main Streamlit app
+├── README.md            # Project documentation
+
+Usuage
+
+streamlit run agent_app.py
