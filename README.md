@@ -100,3 +100,47 @@ Features of streamlit
 
 
 Default port for running the streamlit -- 8501
+
+
+
+Basic headers usage
+
+Title of the web app 
+
+→ st.title(“first app”)
+
+headers
+
+→ st.header(“Basic hello world app”)
+
+still requires any sub headers we can use the subheader
+
+→ st.subheader(“Basic application for the hello world app”)
+
+
+Let say if we want to have the more subheaders then we can go for the markdown option
+
+
+→ st.markdown()
+
+
+Caption :
+
+→ st.caption()
+
+
+→ Code implementation we can use  the st.code (“”’ import pandas as pd pd.read_csv
+(my_csv_file)“””)
+
+
+Text option 
+
+→ st.text()
+
+
+Latex :
+
+let say if we want to add any kind of equation we can use the Latex method
+
+
+→ st.latex()
