@@ -54,3 +54,49 @@ chatbot_basic/
 Usuage
 
 streamlit run agent_app.py
+
+
+
+Streamlit learning 
+
+
+Streamlit –usage 
+
+Allows us to create data applications
+
+1. Deploy a machine learning model
+
+2. Deploy a dashboard
+
+3. Share a data science project
+
+
+Streamlit detects the changes and displays them on the browser → Make changes to your file 
+
+
+With caching we can avoid running expensive code
+
+→ @st.cache_data
+
+1. Serializable objects
+    -- Functions
+    -- API calls
+    -- Data frames
+
+→ @st.cache_resource
+
+	Unserializable objects
+	-- ML Models
+	-- Database Connections
+Features of streamlit
+
+1. Display text
+2. Display plots
+3. Interactivity (radio Buttons, check boxes, forms,sliders etc..)
+4. Multi-page apps
+5. Stateful apps
+6. Data base connections
+
+
+
+Default port for running the streamlit -- 8501
